@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       
+    Scanner sc = new Scanner(System.in);
+    int T = sc.nextInt();
+    int i =0;
+    while (i<T)
+    {
+        String str = sc.next();
+        printOddEven(str);
+        i++;
+    }
+    }
+
+    private static void printOddEven(String str)
+    {
+        StringBuffer Even = new StringBuffer();
+        StringBuffer Odd = new StringBuffer();
+        int i =0;
+        while(i<str.length())
+        {
+          char ch = str.charAt(i);
+          if(i%2==0)
+          {
+              Even.append(ch);
+          }  
+          else
+          {
+              Odd.append(ch);
+          }
+i++;
+        }
+        System.out.println(Even+" "+Odd);
+    }
+}
+
+

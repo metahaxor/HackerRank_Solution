@@ -1,0 +1,51 @@
+https://www.hackerrank.com/challenges/breaking-best-and-worst-records
+
+package com.hacker.rank;
+
+
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+public class BreakingRecord 
+{
+
+static int[] breakingRecords(int[] scores) {
+int n = scores.length;
+int i =0;
+int max =scores[0] , min =scores[0];
+int maxCount=0;
+int minCount = 0;
+while(i<n)
+{
+	if(scores[i]>max)
+    {
+        max =  scores[i];
+        maxCount++;
+    }
+    if(scores[i]<min)
+    {
+        min = scores[i];
+    minCount++;
+    }
+    i++;
+}
+return new int[] {maxCount, minCount};
+}
+
+public static void main(String[] args) throws IOException {
+         int[] scores = new int[] {10,5,20,20 ,4 ,5, 2 ,25, 1};
+
+       int[] result = breakingRecords(scores);
+         //breakingRecords(scores);
+        for (int i = 0; i < result.length; i++) {
+           System.out.println(result[i]);
+            }
+        }
+}
+

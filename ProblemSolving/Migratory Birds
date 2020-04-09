@@ -1,0 +1,40 @@
+package com.hackerRank.problemSolve;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class MigratoryBirds {
+
+
+    static int migratoryBirds(List<Integer> arr) {
+	    int [] counter = new int[6]; // Since it is guranteed only 5 type of birds are there
+	    int n = arr.size();
+	    for (int i = 0; i < n; i++) {
+	    	
+			counter[arr.get(i)]++;
+		
+			
+		}
+	    System.out.println();
+	    return n;
+	    }
+	    
+	    public static void main(String[] args)  {
+	       
+	        List<Integer> arr = Arrays.asList(1,4,4,4,5,3);
+
+	       
+
+	        int result = migratoryBirds(arr);
+	        System.out.println(result);
+
+	       
+	    }
+	}
+

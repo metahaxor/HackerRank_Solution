@@ -1,0 +1,22 @@
+//https://www.hackerrank.com/challenges/drawing-book/
+
+
+import java.io.*;
+import java.math.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    
+    static int pageCount(int n, int p) {
+       int totalpagefromFront = n/2;
+       int targetpageturnFront = p/2;
+
+       int targetpageturnBack = totalpagefromFront-targetpageturnFront ;
+
+       return Math.min(targetpageturnFront,targetpageturnBack);
+    }
+
+}

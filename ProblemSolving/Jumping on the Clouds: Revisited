@@ -1,0 +1,26 @@
+//https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited/problem
+public class Solution {
+
+    // used while loop as increment differs for iteration
+    static int jumpingOnClouds(int[] c, int k) {
+        int n = c.length;
+        int i =0;
+        int j =0;
+        int energy =0;
+       do
+        {
+            if(c[i]==0)
+            {
+                energy++;
+            }
+            else
+            {
+                energy+=3;
+            }
+           
+            i = (i+k)%n; // to keep it circular, once i+k >= n , i becomes 0
+        }while(i!=0);
+        return 100-energy;
+    }
+
+ 

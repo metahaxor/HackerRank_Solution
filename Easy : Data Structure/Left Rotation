@@ -1,0 +1,74 @@
+//https://www.hackerrank.com/challenges/array-left-rotation/problem
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+    public static int [] lrotate(int a[],int k)
+    {
+        if(k==a.length)
+        return a;
+        else if(k>a.length)
+        {
+            k = k-a.length;
+        }
+        
+        int i =0;
+        while(i<k)
+        {
+            rotate(a);
+            i++;
+        }
+        
+       
+        return a;
+    }
+    private static int [] rotate(int arr[])
+    {
+        for(int i =0;i<arr.length-1;i++)
+        {
+            int temp = arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+            
+        }
+        
+        return arr;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        String[] nd = scanner.nextLine().split(" ");
+
+        int n = Integer.parseInt(nd[0]);
+
+        int d = Integer.parseInt(nd[1]);
+
+        int[] a = new int[n];
+
+        String[] aItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < n; i++) {
+            int aItem = Integer.parseInt(aItems[i]);
+            a[i] = aItem;
+        }
+
+        int [] arr = new int[n];
+        arr = lrotate(a,d);
+        for(int j: arr)
+        System.out.print(j+" ");
+
+
+        scanner.close();
+    }
+}
+

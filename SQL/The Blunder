@@ -1,0 +1,6 @@
+https://www.hackerrank.com/challenges/the-blunder
+
+ceil() -- gives the nearest integer greater of equal
+replace(src,pat,'')
+
+select Ceil(avg(salary) - avg(replace(salary,0,''))) from employees;
